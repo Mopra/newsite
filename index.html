@@ -13,15 +13,19 @@
   <div id="instafeed"></div>
 
 </body>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="instafeed.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="assets/js/instafeed.js"></script>
 <script type="text/javascript">
     var userFeed = new Instafeed({
         get: 'user',
-        u serId: '333386169',
-        accessToken: '333386169.1677ed0.7d8c120afc7347b49e415d5ff9a3465e',
+        userId: '333386169',
+        accessToken: '333386169.1677ed0.7d8c120afc7347b49e415d5ff9a3465e ',
         template: '<div class="col s12 m4 l3 instaItem"><a href="{{link}}"><ul class="interactions"><li><i class="far fa-heart"></i>&nbsp;{{likes}}</li></ul><img src="{{image}}" /></a></div>'
     });
     userFeed.run();
 </script>
+<script type="text/javascript">
 </html>

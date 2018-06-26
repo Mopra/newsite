@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,13 +19,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src="assets/js/instafeed.js"></script>
 <script type="text/javascript">
-    var userFeed = new Instafeed({
-        get: 'user',
-        userId: '333386169',
-        accessToken: '333386169.1677ed0.7d8c120afc7347b49e415d5ff9a3465e ',
-        template: '<div class="col s12 m4 l3 instaItem"><a href="{{link}}"><ul class="interactions"><li><i class="far fa-heart"></i>&nbsp;{{likes}}</li></ul><img src="{{image}}" /></a></div>'
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'awesome',
+        clientId: 'YOUR_CLIENT_ID'
     });
-    userFeed.run();
+    feed.run();
+</script>
 </script>
 <script type="text/javascript">
 </html>

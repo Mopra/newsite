@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="style.css" media="screen,projection">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+
+  <div id="instafeed"></div>
+
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="instafeed.js"></script>
+<script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        u serId: '333386169',
+        accessToken: '333386169.1677ed0.7d8c120afc7347b49e415d5ff9a3465e',
+        template: '<div class="col s12 m4 l3 instaItem"><a href="{{link}}"><ul class="interactions"><li><i class="far fa-heart"></i>&nbsp;{{likes}}</li></ul><img src="{{image}}" /></a></div>'
+    });
+    userFeed.run();
+</script>
+</html>

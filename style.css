@@ -1,15 +1,51 @@
+html,body {margin:0;padding:0;}
 
+header {
+  width:100vw;
+  height:75vh;
+}
+header > div {
+  position: absolute;
+  top:0;left:0;
+  width:100vw;
+  height:100vh;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+header video {
+  display:block;
+  width:100vw;
+  height:90vh;
+  object-fit: cover;
+}
 
-body.insta{background:#fff}.
-insta #slidetwo{height:60vh}
-.insta header{background:#dd0d8b;height:60vh}
-.insta header .heroWrapper{height:40vh}
-.insta main{padding:10vh 0}
-#instafeed a{position:relative}
-#instafeed .interactions{position:relative;float:right;color:#000;margin-right:20px}
-#instafeed .interactions li{background:#f5f6fa;padding:4px 8px;border-radius:32px}
-#instafeed .instaItem{margin-bottom:20px}
-@media screen and (max-width: 768px){#instafeed .instaItem:nth-child(3n){float:left}}
-#instafeed img{margin-top:-60px;width:100%;height:250px;object-fit:cover}
-@media screen and (max-width: 1340px){#instafeed img{height:200px}}
-@media screen and (max-width: 600px){#instafeed img{height:250px}}
+main {
+  position: relative;
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows:auto;
+  grid-gap:0px;
+}
+main > div {
+
+}
+
+#instafeed {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+#instafeed a img {
+  display:block;
+  object-fit: cover;
+  width:100%;height:350px;
+  border-radius: 30px;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+}
+
+@media(min-width:768px) {
+  main {
+    grid-template-columns: 1fr 8fr 1fr;
+  }
+  #instafeed {
+    grid-gap: 40px;
+  }
+}
